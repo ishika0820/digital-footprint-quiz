@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's Your Digital Footprint?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+        <header id="intro-header" class="card-header">
+        <h1>What's Your Digital Footprint?</h1>
+        </header>
+
+        <section id="intro-page" class="card-content">
+            <div class="footprint-icon">👣</div>
+            <h2>Every Click Leaves a Trace.</h2>
+            <p>
+                Everything you do online leaves a trace — posts, comments, likes, searches, location check-ins, even things you've deleted. Together, these form your <strong>digital footprint:</strong> a permanent record that employers, universities, and bad actors can all access.</strong>
+            </p>
+            <p>
+                Studies show that <strong>70% of employers screen candidates' social media</strong> before hiring, and over half have decided not to hire someone based on what they found. Your online presence is already part of your professional identity, whether you've thought about it that way or not.
+            </p>
+            <div class="info-box">
+
+                <h3>Active vs. Passive Digital Footprints</h3>
+
+                <p>Your digital footprint has two main layers:</p>
+
+                <div class="footprint-type">
+                <div>
+                    <p>
+                        <strong>Active footprint:</strong>
+                        things you deliberately share like posts, profile infor, photos, comments, reviews.
+                    </p>
+                </div>
+                </div>
+                <div class="footprint-type">
+                <div>
+                    <p>
+                        <strong>Passive footprint:</strong>
+                        data collected without you acitvely sharing like your location, browsing history, what you click on, how long you linger on a page, device info.
+                    </p>
+                </div>
+                </div>
+                <p class="takeaway">
+                Remember: before sharing something online, consider who might see it now or in the future.
+                </p>
+            </div>
+            <div class="privacy-note">
+                🔒 <strong>Your Privacy Matters.</strong>
+                <p>
+                This activity runs entirely in your browser.
+                Your answers are not submitted, recorded,
+                or shared with anyone.
+                </p>
+            </div>
+            <button id="start-btn" type="button">
+                Discover My Footprint →
+            </button>
+        </section>
+
+        <section id="quiz-page" class="quiz-page" hidden>
+            <header class="card-header">
+                <h1>What Does Your Footprint Look Like?</h1>
+            </header>
+            <div class="card-content">
+                <p>
+                Check everything that applies to you — honestly. This isn't a test with right or wrong answers. Its a mirror. No one sees your responses; this runs entirely in your browser.
+                </p>
+                <p class="quiz-instructions">
+                Select an item to learn why it matters.
+                </p>
+                <div class="progress-card">
+                <div class="progress-heading">
+                    <span>YOUR FOOTPRINT SIZE</span>
+                    <strong id="footprint-label">None yet</strong>
+                </div>
+                <div class="progress-track">
+                    <div id="progress-fill"></div>
+                </div>
+
+                <div class="footprint-counts">
+                    <span>👣 Active: <b id="active-count">0</b></span>
+                    <span>📡 Passive: <b id="passive-count">0</b></span>
+                </div>
+                </div>
+                <div class="question-section">
+                <h3 class="question-heading">
+                    <span class="active-dot"></span>
+                    ACTIVE FOOTPRINT
+                </h3>
+                <p class="section-description">
+                    Things you deliberately share online
+                </p>
+                <div id="active-questions"></div>
+                </div>
+                <div class="question-section">
+                <h3 class="question-heading">
+                    <span class="passive-dot"></span>
+                    PASSIVE FOOTPRINT
+                </h3>
+                <p class="section-description">
+                    Information collected as you use websites and apps
+                </p>
+                <div id="passive-questions"></div>
+                </div>
+                <div class="quiz-navigation">
+                <button id="back-btn" class="secondary-btn">
+                    ← Back
+                </button>
+                <button id="results-btn">
+                    See My Footprint Analysis →
+                </button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="results-page" class="results-page" hidden>
+
+        <header class="card-header">
+            <span class="badge">YOUR RESULTS</span>
+            <h1>Your Digital Footprint Analysis</h1>
+        </header>
+
+        <div class="card-content">
+
+            <div class="results-summary">
+            <span class="section-label">YOUR FOOTPRINT ESTIMATE</span>
+
+            <div id="result-icon" class="result-icon">👣</div>
+
+            <h2 id="result-category">Moderate Footprint</h2>
+
+            <div class="result-score">
+                <span id="result-percentage">0</span>%
+            </div>
+
+            <div class="result-meter">
+                <div id="result-meter-fill"></div>
+            </div>
+
+            <div class="meter-labels">
+                <span>SMALL</span>
+                <span>MODERATE</span>
+                <span>LARGE</span>
+            </div>
+
+            <p class="score-disclaimer">
+                This is an educational estimate based on your
+                selected activities, not a measurement of all
+                information available about you online.
+            </p>
+            </div>
+
+            <div class="results-explanation">
+            <span class="section-label">WHAT DOES THIS MEAN?</span>
+            <h3 id="result-heading"></h3>
+            <p id="result-description"></p>
+            </div>
+
+            <div class="results-breakdown">
+            <span class="section-label">YOUR FOOTPRINT BREAKDOWN</span>
+            <h3>Active vs. Passive</h3>
+
+            <div class="breakdown-item">
+                <div class="breakdown-heading">
+                <span>👣 Active Footprint</span>
+                <strong id="active-score">0%</strong>
+                </div>
+                <div class="breakdown-track">
+                <div id="active-bar" class="active-bar"></div>
+                </div>
+            </div>
+
+            <div class="breakdown-item">
+                <div class="breakdown-heading">
+                <span>📡 Passive Footprint</span>
+                <strong id="passive-score">0%</strong>
+                </div>
+                <div class="breakdown-track">
+                <div id="passive-bar" class="passive-bar"></div>
+                </div>
+            </div>
+
+            <p class="breakdown-note">
+                These percentages show the proportion of
+                possible points selected in each category.
+            </p>
+            </div>
+
+            <div class="recommendations-section">
+            <span class="section-label">YOUR NEXT STEPS</span>
+            <h3>Take Control of Your Digital Footprint</h3>
+            <p>
+                Here are some suggestions based on your answers.
+            </p>
+
+            <div id="recommendations-list"></div>
+            </div>
+
+            <div class="privacy-note">
+            🔒 <strong>Your answers remain private.</strong>
+            <p>
+                Your results were calculated in your browser.
+                Nothing was submitted or saved by this quiz.
+            </p>
+            </div>
+
+            <div class="quiz-navigation">
+            <button id="edit-answers-btn" class="secondary-btn">
+                ← Edit My Answers
+            </button>
+
+            <button id="retake-btn">
+                Retake Assessment ↻
+            </button>
+            </div>
+
+        </div>
+        </section>
+
+
+    </div>
+  </main>
+
+</body>
+</html>
