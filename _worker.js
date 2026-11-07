@@ -10,6 +10,19 @@ function json(data, status = 200) {
   });
 }
 
+function isAllowedEmail(email, domain) {
+  if (typeof email !== "string") return false;
+
+  const emailDomain = email.toLowerCase().split("@")[1];
+
+  if (!emailDomain) return false;
+
+  return (
+    emailDomain === domain ||
+    emailDomain.endsWith("." + domain)
+  );
+}
+
 function encodeBase64Url(bytes) {
   let binary = "";
   for (const byte of bytes) {
@@ -96,7 +109,7 @@ async function verifySession(request, secret, domain) {
       typeof payload.uid === "string" &&
       payload.uid.length > 0 &&
       typeof payload.email === "string" &&
-      payload.email.endsWith("@" + domain) &&
+      isAllowedEmail(payload.email, domain) &&
       Number.isFinite(payload.exp) &&
       payload.exp > Date.now() / 1000
     );
@@ -195,7 +208,7 @@ export default {
         !user?.localId ||
         !user.emailVerified ||
         !googleProvider ||
-        !email?.endsWith("@" + domain) ||
+        !isAllowedEmail(email, domain) ||
         user.disabled
       ) {
         return json({ error: "Access denied" }, 403);
