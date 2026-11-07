@@ -507,6 +507,20 @@ retakeButton.addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
 
+document.getElementById("logout-btn")
+  .addEventListener("click", async () => {
+    const response = await fetch("/api/logout", {
+      method: "POST",
+      credentials: "same-origin"
+    });
+
+    if (response.ok) {
+      window.location.replace("/login");
+    } else {
+      alert("Could not sign out. Please try again.");
+    }
+  });
+
 // Initialize questionnaire
 renderQuestions();
 updateProgress();

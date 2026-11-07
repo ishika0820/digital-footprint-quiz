@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>University Login | Digital Footprint Quiz</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/auth.js"></script>
+</head>
+<body>
+  <main class="container">
+    <section id="login-page" class="login-card">
+
+      <div class="login-header">
+        <span class="badge">MEMBER ACCESS</span>
+        <h1>What's Your Digital Footprint?</h1>
+        <p>A Digital Footprint Self-Assessment</p>
+      </div>
+
+      <div class="login-content">
+        <div class="login-icon">🔐</div>
+
+        <h2>Welcome!</h2>
+
+        <p>
+          Please sign in with your USC email to continue.
+        </p>
+
+        <button id="google-login-btn" type="button">
+          Continue with Google
+        </button>
+
+        <p id="login-error" class="login-error"
+           role="alert" hidden></p>
+
+        <p class="login-privacy">
+          Your quiz answers are processed locally and are not submitted to our server.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

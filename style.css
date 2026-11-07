@@ -9,6 +9,90 @@
   box-sizing: border-box;
 }
 
+/* UNIVERSITY LOGIN */
+
+.login-card {
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.login-header {
+  background: var(--navy);
+  color: white;
+  padding: 36px;
+  text-align: center;
+}
+
+.login-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: white;
+  margin: 14px 0 8px;
+}
+
+.login-header p {
+  color: #d3e0ed;
+  margin: 0;
+}
+
+.login-content {
+  padding: 45px 35px;
+  text-align: center;
+}
+
+.login-icon {
+  font-size: 40px;
+}
+
+.login-content h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--navy);
+  margin: 16px 0;
+}
+
+.login-content > p {
+  max-width: 430px;
+  margin: 12px auto;
+}
+
+#google-login-btn {
+  background: var(--navy);
+  color: white;
+  margin: 30px auto 20px;
+  padding: 16px 30px;
+  border-radius: 9px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#google-login-btn:hover {
+  background: var(--teal);
+}
+
+#google-login-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.login-error {
+  color: #a63838;
+  background: #fceaea;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.login-privacy {
+  color: #84909f;
+  font-size: 12px;
+  margin-top: 30px !important;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
   background: var(--cream);
