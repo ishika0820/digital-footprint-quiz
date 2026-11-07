@@ -637,3 +637,61 @@ p {
   color: #64748b;
   margin: 0;
 }
+
+.privacy-exposure-card {
+  background: #ffffff;
+  border: 1px solid #e7e3dc;
+  border-radius: 14px;
+  padding: 28px;
+  margin: 28px 0 35px;
+}
+
+.exposure-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 12px 0 20px;
+}
+
+.exposure-heading h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+#exposure-percentage {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.exposure-meter {
+  height: 12px;
+  background: #e5e3df;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#exposure-meter-fill {
+  width: 0%;
+  height: 100%;
+  background: var(--teal);
+  border-radius: 20px;
+  transition: width 0.5s ease;
+}
+
+#exposure-description {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .exposure-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
